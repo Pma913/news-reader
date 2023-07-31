@@ -1,0 +1,97 @@
+{
+ "status": "ok",
+    "totalResults": 7,
+    "articles":[
+  {
+    "source": {
+      "id": "1",
+      "name": "News Source 1"
+    },
+    "author": "Author 1",
+    "title": "Title 1",
+    "description": "Description 1",
+    "url": "https://example.com/article1",
+    "urlToImage": "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmV3cyUyMGhlYWRsaW5lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+    "publishedAt": "2023-07-31T10:00:00Z",
+    "content": "Content of article 1..."
+  },
+  {
+    "source": {
+      "id": "2",
+      "name": "News Source 2"
+    },
+    "author": "Author 2",
+    "title": "Title 2",
+    "description": "Description 2",
+    "url": "https://example.com/article2",
+    "urlToImage": "https://images.unsplash.com/photo-1587955359102-76802c3c804c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmV3cyUyMGhlYWRsaW5lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+    "publishedAt": "2023-07-31T11:00:00Z",
+    "content": "Content of article 2..."
+  },
+  {
+    "source": {
+      "id": "3",
+      "name": "News Source 3"
+    },
+    "author": "Author 3",
+    "title": "Title 3",
+    "description": "Description 3",
+    "url": "https://example.com/article3",
+    "urlToImage": "https://images.unsplash.com/photo-1603614486387-276f74fcbe2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG5ld3MlMjBoZWFkbGluZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "publishedAt": "2023-07-31T12:00:00Z",
+    "content": "Content of article 3..."
+  },
+  {
+    "source": {
+      "id": "4",
+      "name": "News Source 4"
+    },
+    "author": "Author 4",
+    "title": "Title 4",
+    "description": "Description 4",
+    "url": "https://example.com/article4",
+    "urlToImage": "https://images.unsplash.com/photo-1611287158961-84f21a9a9fb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG5ld3MlMjBoZWFkbGluZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "publishedAt": "2023-07-31T13:00:00Z",
+    "content": "Content of article 4..."
+  },
+  {
+    "source": {
+      "id": "5",
+      "name": "News Source 5"
+    },
+    "author": "Author 5",
+    "title": "Title 5",
+    "description": "Description 5",
+    "url": "https://example.com/article5",
+    "urlToImage": "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmV3cyUyMGhlYWRsaW5lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+    "publishedAt": "2023-07-31T14:00:00Z",
+    "content": "Content of article 5..."
+  },
+  {
+    "source": {
+      "id": "6",
+      "name": "News Source 6"
+    },
+    "author": "Author 6",
+    "title": "Title 6",
+    "description": "Description 6",
+    "url": "https://example.com/article6",
+    "urlToImage": "https://images.unsplash.com/photo-1587955359102-76802c3c804c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmV3cyUyMGhlYWRsaW5lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
+    "publishedAt": "2023-07-31T15:00:00Z",
+    "content": "Content of article 6..."
+  },
+  {
+    "source": {
+      "id": "7",
+      "name": "News Source 7"
+    },
+    "author": "Author 7",
+    "title": "Title 7",
+    "description": "Description 7",
+    "url": "https://example.com/article7",
+    "urlToImage": "https://images.unsplash.com/photo-1603614486387-276f74fcbe2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG5ld3MlMjBoZWFkbGluZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "publishedAt": "2023-07-31T16:00:00Z",
+    "content": "Content of article 7..."
+  }
+  ]
+}
