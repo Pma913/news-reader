@@ -3,7 +3,6 @@ import './Article.css'
 const dayjs = require('dayjs')
 
 const Article = ({ headline, image, description, date }) => {
-  console.log(dayjs(date).format('MMM DD/YYYY'))
   return (
     <div>
       <img className="art-thumb" alt="news article display" src={image} />
