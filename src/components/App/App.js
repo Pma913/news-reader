@@ -1,20 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import './App.css'
 import sampDat from '../../utilities/sample-data.json'
 import ArticleDisplay from '../ArticleDisplay/ArticleDisplay'
 
-const App = () => {
-  const formatArticles = () => {
+const App = () => { 
+  const [arts, setArts] = useState([])
+
+  const formatArticles = (data) => {
     let i = 0
-    sampDat.articles.forEach(art => {
+    data.articles.forEach(art => {
       art.source.id = i
       i++
-    })
+    }) 
+    setArts(data.articles)
   }
 
+  useEffect(() => {
+    formatArticles(sampDat)
+  })   
+
   return (
-    <div>
+    <div className="main-display">
       <h1>We working</h1>
-      <ArticleDisplay articles={sampDat.articles} />
+      <ArticleDisplay articles={arts} />
     </div>
   )
 }
