@@ -5,6 +5,7 @@ import ArticleDisplay from '../ArticleDisplay/ArticleDisplay'
 import Header from '../Header/Header'
 import ArticleDetails from '../ArticleDetails/ArticleDetails'
 import { Route, Routes } from 'react-router-dom'
+import getNews from '../../utilities/apiCalls'
 
 const App = () => { 
   const [arts, setArts] = useState([])
@@ -36,8 +37,13 @@ const App = () => {
     setArt(chosenArt)
   } 
 
+  const fetchData = () => {
+    getNews()
+    .then(data => formatArticles(data))
+  }
+
   useEffect(() => {
-    formatArticles(sampDat)
+    fetchData()
   }, [])   
 
   return (
