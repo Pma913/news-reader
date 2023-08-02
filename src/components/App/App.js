@@ -3,11 +3,13 @@ import './App.css'
 import sampDat from '../../utilities/sample-data.json'
 import ArticleDisplay from '../ArticleDisplay/ArticleDisplay'
 import Header from '../Header/Header'
+import ArticleDetails from '../ArticleDetails/ArticleDetails'
 import { Route, Routes } from 'react-router-dom'
 
 const App = () => { 
   const [arts, setArts] = useState([])
   const [controllArts, setControllArts] = useState([])
+  const [art, setArt] = useState({})
 
   const formatArticles = (data) => {
     let i = 0
@@ -29,6 +31,11 @@ const App = () => {
     setArts(controllArts)
   }
 
+  const getArticle = (id) => {
+    const chosenArt = arts.find(art => art.source.id === id)
+    setArt(chosenArt)
+  } 
+
   useEffect(() => {
     formatArticles(sampDat)
   }, [])   
@@ -37,7 +44,8 @@ const App = () => {
     <div className="main-display">
       <Header search={searchArts} clear={clearSearch}/>
       <Routes>
-        <Route path="/" element={<ArticleDisplay articles={arts} />} />
+        <Route path="/" element={<ArticleDisplay getArt={getArticle} articles={arts} />} />
+        <Route path="/details" element={<ArticleDetails props={art}/>} />
       </Routes>
     </div>
   )

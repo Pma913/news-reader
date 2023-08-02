@@ -2,4 +2,17 @@
   width: 300px;
   height: 200px;
   object-fit: cover;
+  border-radius: 15px;
+}
+
+.article-box {
+  border: solid palevioletred;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
 }
