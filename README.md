@@ -10,6 +10,7 @@ News Reader is a web application that gathers top headlines from the News API an
 - React
 - React Router
 - CSS
+- Dayjs
 
 ## Instalation
 - clone the [News Reader](https://github.com/Pma913/news-reader) repo to your local machine
