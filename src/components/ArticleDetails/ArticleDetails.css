@@ -1,0 +1,32 @@
+.details {
+  margin: 5%;
+  width: 90%;
+}
+
+.details-img {
+  width: 60%
+}
+
+.art-headline {
+  font-size: 3em;
+}
+
+@media (max-width: 800px) {
+  .art-headline {
+    font-size: 2em;
+  }
+  
+  .details-img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .art-headline {
+    font-size: 1.2em;
+  }
+
+  .details-img {
+    width: 100%;
+  }
+}

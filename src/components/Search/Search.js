@@ -6,20 +6,17 @@ const Search = ({ search, clear }) => {
 
   return (
     <div className="search">
-      <input className="input-field" placeholder="search..." type="text" value={input} onChange={(event) => {
+      <input className="input-field" placeholder="Type to search..." type="text" value={input} onChange={(event) => {
         setInput(event.target.value)
+        search(event.target.value)
       }}/>
-      <div className="button-container">
-        <button onClick={(event) => {
-          event.preventDefault()
-          search(input)
-        }}>Search</button>
+      
         <button onClick={(event) => {
           event.preventDefault()
           clear()
           setInput('')
         }}>Clear</button>
-      </div>
+      
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
-import sampDat from '../../utilities/sample-data.json'
 import ArticleDisplay from '../ArticleDisplay/ArticleDisplay'
 import Header from '../Header/Header'
 import ArticleDetails from '../ArticleDetails/ArticleDetails'
@@ -11,6 +10,7 @@ const App = () => {
   const [arts, setArts] = useState([])
   const [controllArts, setControllArts] = useState([])
   const [art, setArt] = useState({})
+  const [isClicked, setIsClicked] = useState(false)
 
   const formatArticles = (data) => {
     let i = 0
@@ -24,7 +24,7 @@ const App = () => {
 
   const searchArts = (text) => {
     const upText = text.toUpperCase()
-    const filteredArts = arts.filter(art => art.title.toUpperCase().includes(upText))
+    const filteredArts = controllArts.filter(art => art.title.toUpperCase().includes(upText))
     setArts(filteredArts)
   }
 
@@ -37,20 +37,27 @@ const App = () => {
     setArt(chosenArt)
   } 
 
-  const fetchData = () => {
-    getNews()
-    .then(data => formatArticles(data))
+  const handleToggle = () => {
+    setIsClicked(!isClicked)
   }
 
+  const fontMode = isClicked ? 'standard font' : 'dyslexic font'
+
   useEffect(() => {
-    fetchData()
+    getNews()
+    .then(data => formatArticles(data))
   }, [])   
 
   return (
-    <div className="main-display">
-      <Header search={searchArts} clear={clearSearch}/>
+    <div className={`main-display ${isClicked ? "standard" : "dyslexic"}`}>
+    <button className="font-btn" onClick={() => handleToggle()}>{fontMode}</button>
       <Routes>
-        <Route path="/" element={<ArticleDisplay getArt={getArticle} articles={arts} />} />
+        <Route path="/" element={
+        <div className="main-page-display">
+          <Header search={searchArts} clear={clearSearch}/>
+          <ArticleDisplay getArt={getArticle} articles={arts} />
+        </div>
+        } />
         <Route path="/details" element={<ArticleDetails props={art}/>} />
       </Routes>
     </div>
